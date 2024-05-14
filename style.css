@@ -90,5 +90,24 @@ header {
         }
       }
     }
+    .mobile-toggle {
+      /* display: none; */
+      color: var(--red-400);
+    }
+  }
+
+  /* mobile view port */
+  @media (max-width: 768px) {
+    nav {
+      ul {
+        display: none;
+        padding: 10px;
+        @media (max-widt: 768) {
+          display: inline-block;
+          position: absolute;
+          top: 20px;
+        }
+      }
+    }
   }
 }
