@@ -296,15 +296,16 @@ p {
 
 h2 {
   font-size: 64px;
+  color: var(--red-400);
   line-height: 1;
   margin-bottom: 10px;
   text-align: center;
+  padding: 30px;
   small {
     display: block;
     font-weight: 100;
-    font-size: 0.5rem;
-    color: var(--base-800);
-    padding: 30px;
+    font-size: 0.5em;
+    color: var(--red-500);
   }
   @media (max-width: 1024px) {
     font-size: 48px;
