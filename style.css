@@ -40,7 +40,6 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   font-size: 20px;
-  padding: 1000px;
 }
 
 header {
@@ -357,6 +356,75 @@ h3 {
     .left-column,
     .right-column {
       background-color: transparent;
+    }
+  }
+}
+
+.work-experience {
+  .jobs {
+    display: flex;
+    gap: 30px;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+    article {
+      background-color: var(--base-400);
+      padding: 30px;
+      border-radius: 30px;
+      flex: 1;
+      h3 {
+        background-color: var(--base-400);
+        color: var(--base-100);
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      div {
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: var(--base-100);
+      }
+      p {
+        background-color: var(--base-400);
+        color: var(--base-100);
+        margin-bottom: 10px;
+      }
+      figure {
+        width: 100%;
+        padding: 50%;
+        overflow: hidden;
+        position: relative;
+        border-radius: 15px;
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          object-fit: cover;
+          transition: ease 0.3s all;
+        }
+        figcaption {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color: var(--base-800);
+          color: var(--base-100);
+          text-align: center;
+          padding: 10px;
+          opacity: 0;
+          visibility: hidden;
+          transition: ease 0.3 all;
+        }
+        &:hover {
+          figcaption {
+            opacity: 1;
+            visibility: visible;
+          }
+          img {
+            transform: scale(1.2);
+          }
+        }
+      }
     }
   }
 }
