@@ -438,84 +438,88 @@ h3 {
   .bento-grid {
     display: grid;
     gap: 20px; /* Reduce gap for a more compact layout */
-    grid-template-columns: repeat(3, 1fr); /* Adjust columns to 3 for a uniform look */
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Adjust columns to 3 for a uniform look */
     grid-template-rows: auto; /* Allow rows to auto-size based on content */
     @media (max-width: 1024px) {
-      grid-template-columns: repeat(2, 1fr); /* Adjust columns for smaller screens */
+      grid-template-columns: repeat(
+        2,
+        1fr
+      ); /* Adjust columns for smaller screens */
       grid-template-rows: repeat(6, auto); /* Adjust rows for smaller screens */
     }
   }
-    @media (max-width: 768px) {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      height: auto;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: auto;
+  }
+  .bento-item {
+    padding: 0; /* Remove padding */
+    background-color: var(--base-200);
+    border-radius: 10px; /* Adjust border radius for a softer look */
+    position: relative;
+    overflow: hidden;
+    display: flex; /* Ensure the container stretches to fit the image */
+    justify-content: center;
+    align-items: center;
+    height: 180px; /* Adjust height for better uniformity */
+    img {
+      width: 100%; /* Ensure the image takes the full width */
+      height: 100%; /* Ensure the image takes the full height */
+      object-fit: cover; /* Maintain aspect ratio while covering the box */
     }
-    .bento-item {
-      padding: 0; /* Remove padding */
-      background-color: var(--base-200);
-      border-radius: 10px; /* Adjust border radius for a softer look */
-      position: relative;
-      overflow: hidden;
-      display: flex; /* Ensure the container stretches to fit the image */
-      justify-content: center;
-      align-items: center;
-      height: 180px; /* Adjust height for better uniformity */
-      img {
-        width: 100%; /* Ensure the image takes the full width */
-        height: 100%; /* Ensure the image takes the full height */
-        object-fit: cover; /* Maintain aspect ratio while covering the box */
-      }
+  }
+
+  &:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+    @media (max-width: 1024px) {
+      grid-column: span 2;
+      grid-row: span 2;
     }
-    
-      &:nth-child(1) {
-        grid-column: span 2;
-        grid-row: span 2;
-        @media (max-width: 1024px) {
-          grid-column: span 2;
-          grid-row: span 2;
-        }
-      }
-      &:nth-child(2) {
-        grid-column: span 2;
-        grid-row: span 1;
-        @media (max-width: 1024px) {
-          grid-column: span 3;
-          grid-row: span 2;
-        }
-      }
-      &:nth-child(3) {
-        grid-column: span 1;
-        grid-row: span 1;
-        @media (max-width: 1024px) {
-          grid-column: span 3;
-          grid-row: span 2;
-        }
-      }
-      &:nth-child(4) {
-        grid-column: span 1;
-        grid-row: span 1;
-        @media (max-width: 1024px) {
-          grid-column: span 2;
-          grid-row: span 4;
-        }
-      }
-      &:nth-child(5) {
-        grid-column: span 2;
-        grid-row: span 1;
-        @media (max-width: 1024px) {
-          grid-column: span 3;
-          grid-row: span 2;
-        }
-      }
-      &:nth-child(6) {
-        grid-column: span 5;
-        grid-row: span 3;
-        @media (max-width: 1024px) {
-          grid-column: span 5;
-          grid-row: span 2;
-        }
-      }
+  }
+  &:nth-child(2) {
+    grid-column: span 2;
+    grid-row: span 1;
+    @media (max-width: 1024px) {
+      grid-column: span 3;
+      grid-row: span 2;
+    }
+  }
+  &:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 1;
+    @media (max-width: 1024px) {
+      grid-column: span 3;
+      grid-row: span 2;
+    }
+  }
+  &:nth-child(4) {
+    grid-column: span 1;
+    grid-row: span 1;
+    @media (max-width: 1024px) {
+      grid-column: span 2;
+      grid-row: span 4;
+    }
+  }
+  &:nth-child(5) {
+    grid-column: span 2;
+    grid-row: span 1;
+    @media (max-width: 1024px) {
+      grid-column: span 3;
+      grid-row: span 2;
+    }
+  }
+  &:nth-child(6) {
+    grid-column: span 5;
+    grid-row: span 3;
+    @media (max-width: 1024px) {
+      grid-column: span 5;
+      grid-row: span 2;
     }
   }
 }
