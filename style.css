@@ -523,3 +523,127 @@ h3 {
     }
   }
 }
+
+.chat-bot {
+  .chat-bot-white {
+    background-color: var(--base-200);
+    border-radius: 30px;
+    padding: 30px;
+    gap: 30px;
+    display: flex;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+    .chat-info {
+      flex: 3;
+      padding-right: 30px;
+      background-color: var(--base-200);
+    }
+    .chat-box {
+      flex: 4;
+      background-color: var(--base-200); /* Set your desired background color */
+      border-radius: 15px; /* Optional: Add some border radius */
+      padding: 30px; /* Optional: Add some padding */
+      display: flex;
+      flex-direction: column;
+
+      a {
+        border-radius: 50px;
+      }
+      .scroll-area {
+        background-color: var(--base-200);
+        max-height: 300px;
+        height: 300px;
+        overflow-y: scroll;
+        ul {
+          background-color: var(--base-200);
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          gap: 15px;
+          li {
+            display: flex;
+            background-color: var(--base-200);
+            align-items: center;
+            gap: 15px;
+
+            &:nth-child(even) {
+              text-align: right;
+              justify-content: flex-end;
+              flex-direction: row-reverse;
+              span {
+                border-radius: 50%;
+                font-weight: bold;
+                color: var(--base-200);
+                background-color: var(--base-800);
+              }
+            }
+            span {
+              font-weight: bold;
+              background-color: var(--red-500);
+              width: 64px;
+              height: 64px;
+              border-radius: 50%;
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              @media (max-width: 768px) {
+                height: 48px;
+                width: 48px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .message {
+      background-color: var(--base-200);
+    }
+
+    .chat-message {
+      background-color: var(--base-200); /* Set your desired background color */
+      display: flex;
+      gap: 10px;
+      padding: 10px; /* Add some padding */
+      border-radius: 15px; /* Optional: Add some border radius */
+      margin-top: 10px; /* Optional: Add some margin at the top */
+      input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid var(--base-400);
+        border-radius: 10px;
+        background-color: var(
+          --base-100
+        ); /* Match the input field background */
+        &:hover {
+          outline: none;
+          background-color: var(--base-800);
+          color: var(--base-100);
+        }
+        &:focus {
+          background-color: var(--base-800);
+          color: var(--base-100);
+        }
+      }
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        background-color: var(--red-400);
+        color: var(--base-800);
+        font-weight: bolder;
+        font-size: large;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        &:hover {
+          background-color: var(--red-800);
+        }
+      }
+    }
+  }
+}
