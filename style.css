@@ -438,24 +438,36 @@ h3 {
   .bento-grid {
     display: grid;
     gap: 30px;
-    grid-template-columns: repeat(5, 2fr); /*5 column items*/
-    grid-template-rows: repeat(4, 1fr); /*4 column items*/
+    grid-template-columns: repeat(5, 1fr); /*5 column items*/
+    grid-template-rows: repeat(4, 1fr);
+    height: 960px;
     @media (max-width: 1024px) {
       grid-template-rows: repeat(8, 1fr);
     }
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      height: auto;
+    }
     .bento-item {
-      padding: 30px;
+      padding: 0;
       background-color: var(--base-200);
       border-radius: 15px;
       position: relative;
       overflow: hidden;
+      display: flex; /* Ensure the container stretches to fit the image */
+      justify-content: center;
+      align-items: center;
+      height: 200px;
       img {
         position: absolute;
         top: 0;
         left: 0;
+        width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: ease 3s all;
+        transition: ease 0.3s all;
       }
       &:nth-child(1) {
         grid-column: span 2;
