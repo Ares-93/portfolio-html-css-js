@@ -554,9 +554,9 @@ h3 {
     }
     .chat-box {
       flex: 4;
-      background-color: var(--base-200); /* Set your desired background color */
-      border-radius: 15px; /* Optional: Add some border radius */
-      padding: 30px; /* Optional: Add some padding */
+      background-color: var(--base-200);
+      border-radius: 15px;
+      padding: 30px;
       display: flex;
       flex-direction: column;
 
@@ -593,13 +593,16 @@ h3 {
             }
             span {
               font-weight: bold;
-              background-color: var(--red-500);
+              background-color: var(
+                --red-500
+              ); /* Ensure red bubble has same style */
               width: 64px;
               height: 64px;
               border-radius: 50%;
               display: inline-flex;
               justify-content: center;
               align-items: center;
+              color: var(--base-100); /* Ensure text is readable */
               @media (max-width: 768px) {
                 height: 48px;
                 width: 48px;
