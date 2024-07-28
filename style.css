@@ -659,3 +659,22 @@ h3 {
     }
   }
 }
+
+/* Add animations */
+.hero h1,
+.hero p,
+.hero .call-to-action,
+.hero .social-links,
+.hero img {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.hero h1.loaded,
+.hero p.loaded,
+.hero .call-to-action.loaded,
+.hero .social-links.loaded,
+.hero img.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
