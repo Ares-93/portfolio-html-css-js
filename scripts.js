@@ -9,3 +9,10 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const heroElements = document.querySelectorAll(
+    ".hero h1, .hero p, .hero .call-to-action, .hero .social-links, .hero img"
+  );
+  heroElements.forEach((el) => el.classList.add("loaded"));
+});
